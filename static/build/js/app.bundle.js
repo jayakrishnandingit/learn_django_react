@@ -21259,7 +21259,7 @@ var UserListComponent = exports.UserListComponent = function (_Component) {
     _createClass(UserListComponent, [{
         key: 'render',
         value: function render() {
-            _react2.default.createElement(
+            return _react2.default.createElement(
                 'table',
                 null,
                 _react2.default.createElement(
@@ -21311,7 +21311,7 @@ var UserRowComponent = function (_Component2) {
     _createClass(UserRowComponent, [{
         key: 'render',
         value: function render() {
-            _react2.default.createElement(
+            return _react2.default.createElement(
                 'tr',
                 null,
                 _react2.default.createElement(
@@ -21348,7 +21348,7 @@ var EmptyRowComponent = function (_Component3) {
     _createClass(EmptyRowComponent, [{
         key: 'render',
         value: function render() {
-            _react2.default.createElement(
+            return _react2.default.createElement(
                 'tr',
                 null,
                 _react2.default.createElement(
