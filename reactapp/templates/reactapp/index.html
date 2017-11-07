@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+{% load staticfiles %}
+
+{% block content %}
+	<div class="row">
+		<div class="col-md-12">
+			<div class="table-responsive" id="user-list-container"></div>
+		</div>
+	</div>
+{% endblock %}
+
+{% block extrascripts %}
+	{{block.super}}
+	<script type="text/javascript" src="{% static 'build/js/app.bundle.js' %}"></script>
+{% endblock %}

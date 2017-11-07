@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% load i18n %}
+
+{% block styles %}
+{% endblock %}
+
+{% block extrastyles %}{% endblock %}
+
+{% block layout %}
+    <div id="shadow">
+        <div class="text-center" id="loading">{% trans 'Loading.. Please Wait.' %}</div>
+    </div>
+    {# Top-horizontal bar with account, notifictions, dashboard links #}
+    {# include "partials/nav_accounts.html" #}
+
+    {# Main content of page - other layout templates may override this block #}
+    {% block content_wrapper %}
+        <div class="container">
+            <div class="page_inner">
+                {% block breadcrumbs %}{% endblock %}
+                {% block header %}
+                    <div class="page-header action">
+                        <h1>{% block headertext %}{% endblock %}</h1>
+                    </div>
+                {% endblock %}
+                {# include "partials/alert_messages.html" #}
+                {% block subnavigation %}{% endblock %}
+                <div class="content">
+                    {% block subheader %}{% endblock subheader %}
+
+                    {# Div exists for AJAX updates to entire content section #}
+                    <div id="content_inner">{% block content %}{% endblock %}</div>
+                </div>
+            </div>
+        </div>
+    {% endblock %}
+
+    {# include "partials/footer.html" #}
+{% endblock %}
+
+{# Local scripts #}
+{% block scripts %}
+    {{ block.super }}
+    <!-- jQuery. -->
+    <script type="text/javascript" src="{% static "includes/js/jquery-3.2.1.min.js" %}"></script>
+{% endblock %}
+
+{% block extrascripts %}
+    {# include "partials/extrascripts.html" #}
+    {{ block.super }}
+{% endblock %}
