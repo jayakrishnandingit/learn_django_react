@@ -2,7 +2,7 @@ var webpack = require("webpack");
 const path = require('path');
 
 module.exports = {
-    entry: "./static/src/js/app.js",
+    entry: "./static/src/js/app.jsx",
     output: {
         path: path.resolve("./static/build/js"),
         filename: "app.bundle.js"
@@ -10,7 +10,7 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.js$/,
+                test: /\.jsx$/,
                 exclude: /node_modules/,
                 loader: "babel-loader",
                 query: {
